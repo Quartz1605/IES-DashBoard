@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { formatPercentage } from '@/utils/stocksApi';
 
-export function NewsCard({ indices, className }) {
+export function NewsCard({ indices = [], className }) {
   const groupedByRegion = indices.reduce((acc, index) => {
     if (!acc[index.region]) {
       acc[index.region] = [];
@@ -12,7 +12,7 @@ export function NewsCard({ indices, className }) {
     acc[index.region].push(index);
     return acc;
   }, {});
-  
+
   return (
     <Card className={cn("overflow-hidden", className)}>
       <CardHeader className="pb-3">
@@ -64,3 +64,4 @@ export function NewsCard({ indices, className }) {
     </Card>
   );
 }
+
