@@ -4,14 +4,14 @@ import {
   mockStocks, mockIndices, mockCurrencies, mockNews,
   generatePriceHistory 
 } from '@/utils/stocksApi';
-import { Navbar } from '@/components/layout/Navbar';
-import { Sidebar } from '@/components/layout/Sidebar';
-import { StockCard } from '@/components/stocks/StockCard';
-import { StockChart } from '@/components/stocks/StockChart';
-import { MarketOverview } from '@/components/markets/MarketOverview';
-import { CurrencyExchange } from '@/components/currencies/CurrencyExchange';
-import { NewsCard } from '@/components/news/NewsCard';
-import { StatsCard } from '@/components/ui/StatsCard';
+import { Navbar } from '@/components/layout/Navbar.jsx';
+import { Sidebar } from '@/components/layout/Sidebar.jsx';
+import { StockCard } from '@/components/stocks/StockCard.jsx';
+import { StockChart } from '@/components/stocks/StockChart.jsx';
+import { MarketOverview } from '@/components/markets/MarketOverview.jsx';
+import { CurrencyExchange } from '@/components/currencies/CurrencyExchange.jsx';
+import { NewsCard } from '@/components/news/NewsCard.jsx';
+import { StatsCard } from '@/components/ui/StatsCard.jsx';
 import { BarChart3, TrendingDown, TrendingUp, Wallet2 } from 'lucide-react';
 
 export function Dashboard() {

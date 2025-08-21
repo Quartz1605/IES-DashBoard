@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { formatPercentage } from '@/utils/stocksApi';
 
-export function MarketOverview({ indices, className }) {
+export function NewsCard({ indices, className }) {
   const groupedByRegion = indices.reduce((acc, index) => {
     if (!acc[index.region]) {
       acc[index.region] = [];
