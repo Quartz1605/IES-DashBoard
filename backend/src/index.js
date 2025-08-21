@@ -1,11 +1,15 @@
 // src/server.js
-const express = require('express');
+import express from "express"
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Middlewares
 app.use(express.json());
+app.use(cors({
+  origin : "http://localhost:5173",
+  credentials : true
+}))
 
 // Routes
 app.get('/', (req, res) => {
