@@ -38,7 +38,32 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Inter", ...fontFamily.sans], // 👈 add this
+        sans: [
+          'ui-sans-serif',
+          'system-ui',
+          'BlinkMacSystemFont',
+          '-apple-system',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
+        ],
+      },
+    },
+  },
+  plugins: [],
+  tailwind: {
+    theme: {
+      extend: {
+        colors: {
+          ...require('tailwindcss/colors'),
+        },
       },
     },
   },
