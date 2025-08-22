@@ -1,12 +1,12 @@
-import * as React from "react"
+// This is a simplified toast hook for the dashboard
+// import * as React from "react"
 
-import {
-  ToastActionElement,
-  ToastProps,
-} from "@/components/ui/toast"
+// These are placeholder types for the toast functionality
+// const ToastActionElement = null
+// const ToastProps = null
 
-const TOAST_LIMIT = 1
-const TOAST_REMOVE_DELAY = 1000000
+const _TOAST_LIMIT = 1
+const _TOAST_REMOVE_DELAY = 1000000
 
 let count = 0
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageLayout } from '@/components/layout/PageLayout';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, Treemap, LineChart, Line } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Treemap, LineChart, Line } from 'recharts';
 import { mockStocks, mockCryptos, generatePriceHistory, formatNumber } from '@/utils/stocksApi';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bitcoin, TrendingUp, TrendingDown } from 'lucide-react';

@@ -1,9 +1,8 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     "./index.html",
-    "./src/**/*.jsx", // adjust based on your project
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -31,6 +30,8 @@ module.exports = {
         "warning-foreground": "hsl(var(--warning-foreground))",
         danger: "hsl(var(--danger))",
         "danger-foreground": "hsl(var(--danger-foreground))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -38,32 +39,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: [
-          'ui-sans-serif',
-          'system-ui',
-          'BlinkMacSystemFont',
-          '-apple-system',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'Noto Sans',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
-        ],
-      },
-    },
-  },
-  plugins: [],
-  tailwind: {
-    theme: {
-      extend: {
-        colors: {
-          ...require('tailwindcss/colors'),
-        },
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
       },
     },
   },

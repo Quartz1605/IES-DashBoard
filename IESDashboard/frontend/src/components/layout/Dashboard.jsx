@@ -23,9 +23,6 @@ export function Dashboard() {
   const indices = useMarketIndices(mockIndices);
   const currencies = useCurrencyPairs(mockCurrencies);
   
-  // Generate chart data for the selected stock
-  const selectedStockHistory = generatePriceHistory(30, selectedStock.price, 2);
-  
   // Generate chart data for stock cards
   const stocksWithHistory = stocks.map(stock => {
     return {
@@ -35,14 +32,8 @@ export function Dashboard() {
   });
   
   // Calculate market statistics
-  const gainers = stocks.filter(stock => stock.changePercent > 0);
-  const losers = stocks.filter(stock => stock.changePercent < 0);
-  
   const topGainer = [...stocks].sort((a, b) => b.changePercent - a.changePercent)[0];
   const topLoser = [...stocks].sort((a, b) => a.changePercent - b.changePercent)[0];
-  
-  const totalMarketCap = stocks.reduce((sum, stock) => sum + stock.marketCap, 0);
-  const totalVolume = stocks.reduce((sum, stock) => sum + stock.volume, 0);
   
   const toggleSidebar = () => {
     setIsSidebarCollapsed(prev => !prev);
