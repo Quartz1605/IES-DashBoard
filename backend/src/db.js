@@ -7,7 +7,7 @@ const transactionSchema = new Schema({
   type: { type: String, enum: ["income", "expense"], required: true },
   category: { type: String, required: true }, // Groceries, Transport, etc.
   amount: { type: Number, required: true },
-  date: { type: Date, required: true }, // must be passed from frontend
+  
   notes: String
 });
 
